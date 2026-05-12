@@ -1,0 +1,13 @@
+services:
+  - type: static
+    name: catalogo-comercial-lupa-fiscal
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=300
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
